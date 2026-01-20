@@ -23,7 +23,7 @@ src/
  ├── services/
  │    └── mockApi.js
  └── utils/
-
+```
 ### Endpoints (Simulated)
 -   `GET /api/stats/summary`: Returns high-level KPI metrics (Total Calls, Active Users, Health Score).
 -   `GET /api/stats/trends`: Returns time-series data for usage charts.
