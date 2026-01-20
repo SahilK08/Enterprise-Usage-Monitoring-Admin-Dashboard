@@ -69,6 +69,13 @@ To ensure the dashboard looks "alive" immediately:
 -   **Deterministic Randomness**: Chart data is generated using mathematical functions (e.g., sine waves with noise) to create realistic-looking trends that don't look purely random.
 -   **Live Simulation**: A `setInterval` loop in the `Dashboard` component creates "live" incoming log entries to demonstrate real-time monitoring capabilities.
 
+### Real-Time Updates
+**Current Approach (Polling Simulation)**
+To simulate a live environment without a backend, the application uses a **Polling** strategy:
+-   **Mechanism**: The [Dashboard](cci:1://file:///c:/Users/Sahil/OneDrive/Desktop/AdminPlatform/src/pages/Dashboard.jsx:39:0-154:2) component initializes a `setInterval` timer that requests new data every 5 seconds.
+-   **Data Generation**: The `MockApi` service generates fresh, randomized metrics (via `faker.js`) for every request, ensuring the charts and counters are always "breathing" and fluctuating like a real system.
+-   **Backend Solution**: Set up a WebSocket server that watches the database for changes. Then, instead of the client asking for data every 5 seconds, the server *pushes* a payload only when new events occur.
+-   
 ## Future Improvements
 1.  **Backend Integration**: Replace `mockApi.js` with calls to a real Node.js/Express or Python/FastAPI backend.
 2.  **Authentication**: Implement JWT-based auth flows (Login/Logout).
