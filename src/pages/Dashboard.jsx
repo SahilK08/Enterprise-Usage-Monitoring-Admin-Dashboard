@@ -52,7 +52,14 @@ const Dashboard = () => {
                 setLoading(false);
             }
         };
+        // Initial fetch
         fetchData();
+
+        // Poll every 5 seconds
+        const intervalId = setInterval(fetchData, 5000);
+
+        // Cleanup on unmount
+        return () => clearInterval(intervalId);    
     }, []);
 
     return (
