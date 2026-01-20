@@ -15,6 +15,7 @@ The application is architected using **React** with **Vite** for a performant de
 Since this is a frontend-focused implementation, we utilize a **Service Layout** pattern to simulate backend interactions. All API calls are routed through `src/services/mockApi.js`.
 Easily replaceable mock APIs with real backend services
 
+```text
 src/
  ├── components/
  ├── pages/
