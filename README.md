@@ -80,10 +80,12 @@ To ensure the dashboard looks "alive" immediately:
 
 1. **Install Dependencies (if not already done):**
 
+```bash
 npm install
-
+```
 2. **Start Development Server:**
 
+```bash
 npm run dev
-
+```
 **Access at** http://localhost:5173
