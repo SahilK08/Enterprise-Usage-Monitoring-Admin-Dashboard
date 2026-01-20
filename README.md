@@ -13,6 +13,15 @@ The application is architected using **React** with **Vite** for a performant de
 
 ## API Structure (Mock Layer)
 Since this is a frontend-focused implementation, we utilize a **Service Layout** pattern to simulate backend interactions. All API calls are routed through `src/services/mockApi.js`.
+Easily replaceable mock APIs with real backend services
+
+src/
+ ├── components/
+ ├── pages/
+ ├── context/
+ ├── services/
+ │    └── mockApi.js
+ └── utils/
 
 ### Endpoints (Simulated)
 -   `GET /api/stats/summary`: Returns high-level KPI metrics (Total Calls, Active Users, Health Score).
@@ -66,14 +75,14 @@ To ensure the dashboard looks "alive" immediately:
 4.  **Export Features**: Add CSV/PDF export for usage reports.
 
 
-How to Run
+## How to Run
 
-1. Install Dependencies (if not already done):
+1. **Install Dependencies (if not already done):**
 
 npm install
 
-2. Start Development Server:
+2. **Start Development Server:**
 
 npm run dev
 
-Access at http://localhost:5173
+**Access at** http://localhost:5173
